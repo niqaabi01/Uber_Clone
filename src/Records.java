@@ -2,13 +2,14 @@ import java.io.*;
 import java.util.*;
 
 public class Records{
+    //instance variables for class records
     String file_Path_CSV = "driverList.csv";
     int numberXL;
     int numberX;
     Driver[] drivers ;
 
     Records() {}
-    //iterates the rows in the CVS files
+    //iterates the rows in the CVS files READING CVS FILES
     public int countLines_CSV(String filename) {
         int i = 0;
         try {
@@ -24,6 +25,31 @@ public class Records{
         }
         return i;
     }
+
+    //EXAMPLE OF WRITING TO CSV FILES
+    // public void CsvWriter(Type Variable) throws IOException
+    // {
+    //     try
+	// 	{
+    //     	//creates new files
+	// 		File file = new File("Matches.csv");
+			
+	// 		file.createNewFile();
+	// 		//PrintWriter output = new PrintWriter(file);
+	// 		// creates a file write object without overiding previously stored data
+	// 		Writer writer = new FileWriter(file, true);
+
+	// 		writer.write(profile+"\n");
+			
+	// 		writer.flush();
+	// 		writer.close();
+	// 	}
+	// 	catch(IOException e)
+	// 	{
+	// 		System.out.println(e);
+	// 	}
+    // }
+
     // prints out the info in the form of an array
     public void printArray(Driver[] drivers) {
         System.out.print("[ ");
@@ -63,7 +89,7 @@ public class Records{
             System.out.println("Error: " + e.toString());
         }
     }
-
+    // using arrays to sort driver data which then gets used for sorting and selecting drivers
     public Driver[] ArrayVehicleTypes(String vehicleType) {
 
         Driver[] Xdrivers = new Driver[this.numberX];

@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class UberApp {
+    //using a main method to test an run the code
 
     public static void main(String[] args) {
         System.out.println("Welcome to Uber App ");
@@ -24,9 +25,10 @@ public class UberApp {
         System.out.print("\nVehicle Type: ");
         System.out.print(vehicleType);
         System.out.println("");
-
+        //Intializing methods and overloading 
         UberRide uberRide = new UberRide(startPoint, endPoint, Saaniah);
 
+        // Calling methods
         Driver assignedDriver = uberRide.assignDriver();
 
         System.out.println("\nCalculating cost...");
@@ -37,6 +39,7 @@ public class UberApp {
         System.out.println("Assigned driver: " + assignedDriver.getName() + " " + assignedDriver.getSurname());
         System.out.println("Assigned car: " + assignedDriver.getCar());    
         System.out.println("\nYour ride is complete. Processing payment...");
+        
         uberRide.completePayment(assignedDriver, Saaniah);
         
     }
